@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smart-furnishing-api
+    env: python
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: python app.py  # or replace with your file name
+    envVars:
+      - key: HUGGINGFACE_TOKEN
+        sync: false  # Set this in Render dashboard manually
