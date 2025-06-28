@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFurnish | Intelligent Furniture Solutions</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Update the navigation section -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">SMART<span>FURNISHING</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#design">Design Tool</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <li id="authButtons">
+                    <a href="#" class="btn btn-outline" data-auth="login">Login</a>
+                    <a href="#" class="btn btn-secondary" data-auth="signup">Sign Up</a>
+                </li>
+                <li id="userProfile" style="display: none;">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <span class="user-name" id="userName">User</span>
+                        <div class="user-dropdown">
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </li> -->
+                <!-- Guest view: shows when NOT logged in -->
+                <li id="guestControls">
+                    <a href="#" class="btn btn-outline" data-auth="login">Login</a>
+                    <a href="#" class="btn btn-secondary" data-auth="signup">Sign Up</a>
+                </li>
+
+                <!-- Authenticated view: shows when logged in -->
+                <li id="authControls" style="display: none;">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <span class="user-name" id="userDisplay">User</span>
+                        <div class="user-dropdown">
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Space with Smart Furnishing</h1>
+                <p>Our AI-powered solutions help you design, visualize, and furnish your perfect space with sustainable,
+                    smart furniture.</p>
+                <div class="hero-buttons">
+                    <a href="#design" class="btn btn-primary">Try Design Tool</a>
+                    <a href="gallery.html" class="btn btn-outline">View Gallery</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Smart living room">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Smart Furnishing Features</h2>
+                <p>Experience the future of interior design</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Space Optimization</h3>
+                    <p>Our algorithms calculate the perfect furniture arrangement for your room dimensions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>AR Preview</h3>
+                    <p>Visualize furniture in your actual space using augmented reality technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Materials</h3>
+                    <p>Eco-friendly furniture crafted from responsibly sourced wood and recycled materials.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Smart Integration</h3>
+                    <p>Furniture with built-in IoT capabilities for modern living.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions for every space</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?q=80&w=2113&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Living Room Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Living Room Design</h3>
+                        <p>Create harmonious living spaces with our smart furniture solutions and layout algorithms.</p>
+                        <a href="livingroom.html" class="btn btn-outline">Explore</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Bedroom Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Bedroom Design</h3>
+                        <p>Transform your bedroom into a smart sanctuary with space-saving solutions.</p>
+                        <a href="bedroom.html" class="btn btn-outline">Explore</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd" alt="Office Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Home Office</h3>
+                        <p>Ergonomic and intelligent workspace solutions for productive remote work.</p>
+                        <a href="homeoffice.html" class="btn btn-outline">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Tool Section -->
+    <section id="design" class="design-tool">
+        <div class="container">
+            <div class="section-title">
+                <h2>Smart Design Tool</h2>
+                <p>Create your perfect space in 3 easy steps</p>
+            </div>
+
+            <div class="design-steps">
+                <div class="step-indicator active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Upload Room</span>
+                </div>
+                <div class="step-indicator" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Choose Style</span>
+                </div>
+                <div class="step-indicator" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Select Furniture</span>
+                </div>
+            </div>
+
+            <div class="step-content">
+                <!-- Step 1: Upload Photo -->
+                <div class="step-panel active" id="step1">
+                    <div class="step-left">
+                        <h3>Upload Your Room Photo</h3>
+                        <p>Start by uploading a clear photo of your empty room. This helps our AI understand your space
+                            dimensions and lighting.</p>
+                        <div class="upload-tips">
+                            <h4>Tips for best results:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Use good natural lighting</li>
+                                <li><i class="fas fa-check"></i> Capture from corner to corner</li>
+                                <li><i class="fas fa-check"></i> Keep the camera level</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-right">
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p>Drag & drop your room photo here</p>
+                            <p>or</p>
+                            <button class="btn btn-outline">Browse Files</button>
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                        </div>
+                        <img id="uploadPreview" class="upload-preview" style="display: none;" alt="Room Preview">
+                    </div>
+                </div>
+
+                <!-- Step 2: Select Style -->
+                <div class="step-panel" id="step2">
+                    <div class="step-left">
+                        <h3>Choose Your Design Style</h3>
+                        <p>Select a style that matches your personality. Our AI will customize recommendations
+                            accordingly.</p>
+                        <div class="style-description" id="styleDescription">
+                            <p>Select a style to see detailed description</p>
+                        </div>
+                    </div>
+                    <div class="step-right">
+                        <div class="style-options">
+                            <div class="style-option" data-style="rustic">
+                                <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86"
+                                    alt="Rustic Style">
+                                <p>Rustic</p>
+                            </div>
+                            <div class="style-option" data-style="modern">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Modern">
+                                <p>Modern</p>
+                            </div>
+                            <div class="style-option" data-style="industrial">
+                                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
+                                    alt="Industrial">
+                                <p>Industrial</p>
+                            </div>
+                            <div class="style-option" data-style="scandinavian">
+                                <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd"
+                                    alt="Scandinavian">
+                                <p>Scandinavian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Select Furniture -->
+                <div class="step-panel" id="step3">
+                    <div class="step-left">
+                        <h3>Select Your Furniture</h3>
+                        <p>Choose from our collection of smart furniture pieces. Mix and match to create your perfect
+                            space.</p>
+
+                        <div class="selected-furniture-preview">
+                            <h4>Your Selections:</h4>
+                            <div class="selected-items-container" id="selectedItemsContainer">
+                                <p class="empty-message">No furniture selected yet</p>
+                            </div>
+                        </div>
+
+                        <div class="furniture-selection-tips">
+                            <h4>Selection Tips:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Start with larger anchor pieces first</li>
+                                <li><i class="fas fa-check"></i> Consider your room's traffic flow</li>
+                                <li><i class="fas fa-check"></i> Mix textures for visual interest</li>
+                                <li><i class="fas fa-check"></i> Select 5-7 main pieces for best results</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-right">
+                        <div class="furniture-categories">
+                            <div class="category-tabs">
+                                <button class="category-tab active" data-category="living-room">Living Room</button>
+                                <button class="category-tab" data-category="bedroom">Bedroom</button>
+                                <button class="category-tab" data-category="dining">Dining</button>
+                                <button class="category-tab" data-category="office">Office</button>
+                            </div>
+
+                            <div class="furniture-items-container">
+                                <!-- Living Room Items -->
+                                <div class="furniture-items active" id="living-room-items">
+                                    <div class="furniture-item" data-item="sofa-modern" data-category="living-room">
+                                        <span class="furniture-tag">Popular</span>
+                                        <img src="https://plus.unsplash.com/premium_photo-1664301252346-90c498b35a59?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Modern Sofa">
+                                        <p>Modern Sofa</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="loveseat" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e"
+                                            alt="Loveseat">
+                                        <p>Loveseat</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="coffee-table" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3"
+                                            alt="Coffee Table">
+                                        <p>Coffee Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="tv-stand" data-category="living-room">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91"
+                                            alt="Smart TV Stand">
+                                        <p>Smart TV Stand</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bookshelf" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1593430980369-68efc5a5eb34?q=80&w=2085&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bookshelf">
+                                        <p>Bookshelf</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="armchair" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267"
+                                            alt="Armchair">
+                                        <p>Armchair</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="ottoman" data-category="living-room">
+                                        <img src="https://plus.unsplash.com/premium_photo-1661456160332-628feba90163?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Ottoman">
+                                        <p>Ottoman</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="side-table" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea"
+                                            alt="Side Table">
+                                        <p>Side Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="floor-lamp" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1675767528183-628d7e46ae59?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Floor Lamp">
+                                        <p>Floor Lamp</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="console-table" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1601342630314-8427c38bf5e6"
+                                            alt="Console Table">
+                                        <p>Console Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="rug" data-category="living-room">
+                                        <img src="https://plus.unsplash.com/premium_photo-1687609111998-01eb51f80f4f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Area Rug">
+                                        <p>Area Rug</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="fireplace" data-category="living-room">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00"
+                                            alt="Smart Fireplace">
+                                        <p>Smart Fireplace</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="accent-chair" data-category="living-room">
+                                        <img src="https://plus.unsplash.com/premium_photo-1682410454254-809412bf04bd?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Accent Chair">
+                                        <p>Accent Chair</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="plant-stand" data-category="living-room">
+                                        <img src="https://plus.unsplash.com/premium_photo-1679921582421-f770b37cd4d5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Plant Stand">
+                                        <p>Plant Stand</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="wall-art" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"
+                                            alt="Wall Art">
+                                        <p>Wall Art</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="curio-cabinet" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"
+                                            alt="Curio Cabinet">
+                                        <p>Curio Cabinet</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="sofa-table" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1563637329737-328724d1394d?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Sofa Table">
+                                        <p>Sofa Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="media-console" data-category="living-room">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://images.unsplash.com/photo-1598769569852-88a6bdb1b4d4?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Media Console">
+                                        <p>Media Console</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="recliner" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1464288550599-43d5a73451b8?q=80&w=2096&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Recliner">
+                                        <p>Recliner</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="room-divider" data-category="living-room">
+                                        <img src="https://plus.unsplash.com/premium_photo-1684769161166-16a9531a5d0d?q=80&w=2078&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Room Divider">
+                                        <p>Room Divider</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="end-table" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea"
+                                            alt="End Table">
+                                        <p>End Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="throw-pillows" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1579656592043-a20e25a4aa4b"
+                                            alt="Throw Pillows">
+                                        <p>Throw Pillows</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="blanket-ladder" data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1591534362845-23f894088906?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Blanket Ladder">
+                                        <p>Blanket Ladder</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="floor-mirror" data-category="living-room">
+                                        <img src="https://plus.unsplash.com/premium_photo-1706560278067-b3fb6cba1e4c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Floor Mirror">
+                                        <p>Floor Mirror</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="decorative-screen"
+                                        data-category="living-room">
+                                        <img src="https://images.unsplash.com/photo-1739999064951-4b23b67db549?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Decorative Screen">
+                                        <p>Decorative Screen</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                </div>
+
+                                <!-- Bedroom Items -->
+                                <div class="furniture-items" id="bedroom-items">
+                                    <div class="furniture-item" data-item="queen-bed" data-category="bedroom">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+                                            alt="Queen Bed">
+                                        <p>Smart Bed</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="nightstand" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+                                            alt="Nightstand">
+                                        <p>Nightstand</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="dresser" data-category="bedroom">
+                                        <img src="https://plus.unsplash.com/premium_photo-1683141421283-633f5fc9e4d0?q=80&w=2093&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Dresser">
+                                        <p>Dresser</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="wardrobe" data-category="bedroom">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?q=80&w=2117&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Smart Wardrobe">
+                                        <p>Smart Wardrobe</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="vanity" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91"
+                                            alt="Vanity Table">
+                                        <p>Vanity Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bench" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1653251307042-c5821df9d527?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bed Bench">
+                                        <p>Bed Bench</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="full-mirror" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1675807526240-fb2e22e39048?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Full Length Mirror">
+                                        <p>Full Length Mirror</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="reading-chair" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1598731075175-7075c5fa3b29?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Reading Chair">
+                                        <p>Reading Chair</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="chest-drawers" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1683731332610-23d833f5871f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Chest of Drawers">
+                                        <p>Chest of Drawers</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bedside-lamp" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1713623840285-0c6447ae2d16?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bedside Lamp">
+                                        <p>Bedside Lamp</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="rug-bedroom" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bedroom Rug">
+                                        <p>Bedroom Rug</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="storage-bed" data-category="bedroom">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://media.istockphoto.com/id/182055577/photo/bed-base.jpg?s=2048x2048&w=is&k=20&c=aSJoPZmlSe2Kci2FCHVQH7GhveAQqkkOmi9_Bq2ZOtI="
+                                            alt="Storage Bed">
+                                        <p>Storage Bed</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="makeup-table" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1496128745012-b87f5ccd9cd4?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Makeup Table">
+                                        <p>Makeup Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="blanket-box" data-category="bedroom">
+                                        <img src="https://plus.unsplash.com/premium_photo-1669532597232-e540bc04b657?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Blanket Box">
+                                        <p>Blanket Box</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="jewelry-stand" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1745192902613-82838d9cf031?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Jewelry Stand">
+                                        <p>Jewelry Stand</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="room-divider-bed" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"
+                                            alt="Room Divider">
+                                        <p>Room Divider</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="shoe-rack" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1502238074616-a146498d5158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Shoe Rack">
+                                        <p>Shoe Rack</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="laundry-basket" data-category="bedroom">
+                                        <img src="https://plus.unsplash.com/premium_photo-1679503073951-c9b5eda7ee29?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Laundry Basket">
+                                        <p>Laundry Basket</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="wall-shelf" data-category="bedroom">
+                                        <img src="https://plus.unsplash.com/premium_photo-1698942666669-ba021363a1f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Wall Shelf">
+                                        <p>Wall Shelf</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bedside-caddy" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1572375409096-5c01c7ecd680?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bedside Caddy">
+                                        <p>Bedside Caddy</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="headboard" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1646061142491-fc141798ba14?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Upholstered Headboard">
+                                        <p>Upholstered Headboard</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bedside-table" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+                                            alt="Bedside Table">
+                                        <p>Bedside Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="dressing-table" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1619311731741-d82f87274198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Dressing Table">
+                                        <p>Dressing Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="wardrobe-mirror" data-category="bedroom">
+                                        <img src="https://plus.unsplash.com/premium_photo-1706559879879-07ef673b4bab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Wardrobe Mirror">
+                                        <p>Wardrobe Mirror</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bedside-organizer" data-category="bedroom">
+                                        <img src="https://images.unsplash.com/photo-1722247520369-7f1495e79245?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bedside Organizer">
+                                        <p>Bedside Organizer</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                </div>
+
+                                <!-- Dining Items -->
+                                <div class="furniture-items" id="dining-items">
+                                    <div class="furniture-item" data-item="dining-table" data-category="dining">
+                                        <img src="https://plus.unsplash.com/premium_photo-1664392242935-f22e728a4667"
+                                            alt="Dining Table">
+                                        <p>Dining Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="dining-chairs" data-category="dining">
+                                        <img src="https://plus.unsplash.com/premium_photo-1673214881759-4bd60b76acae?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Dining Chairs">
+                                        <p>Dining Chairs</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="buffet" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1539922980492-38f6673af8dd"
+                                            alt="Buffet Cabinet">
+                                        <p>Buffet Cabinet</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bar-cart" data-category="dining">
+                                        <img src="https://plus.unsplash.com/premium_photo-1679397789488-5c837fe9298a?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bar Cart">
+                                        <p>Bar Cart</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="china-cabinet" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+                                            alt="China Cabinet">
+                                        <p>China Cabinet</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bench-seating" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1561087461-a3be1aeab78f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bench Seating">
+                                        <p>Bench Seating</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="sideboard" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1572561502927-c960609f09d5?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Sideboard">
+                                        <p>Sideboard</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="pendant-light" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1569735551598-506c3e58ae06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Pendant Light">
+                                        <p>Pendant Light</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="wine-rack" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1574976399099-eec7187f17ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Wine Rack">
+                                        <p>Wine Rack</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="dining-rug" data-category="dining">
+                                        <img src="https://plus.unsplash.com/premium_photo-1678790910802-cc3088b48bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Dining Rug">
+                                        <p>Dining Rug</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="display-cabinet" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1647481045013-8efc5594369d?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Display Cabinet">
+                                        <p>Display Cabinet</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="server-cart" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1552326399-9109c86379ae?q=80&w=2066&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Server Cart">
+                                        <p>Server Cart</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="table-runner" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1667892703018-cff173f4b820?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Table Runner">
+                                        <p>Table Runner</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="buffet-lamp" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1575987725683-ce139e0ed4d9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Buffet Lamp">
+                                        <p>Buffet Lamp</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="placemats" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1633944095397-878622ebc01c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Placemats">
+                                        <p>Placemats</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="centerpiece" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1649068453220-f7394ee150d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Centerpiece">
+                                        <p>Centerpiece</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="coasters" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1692028194293-cfc38b369266?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Coasters">
+                                        <p>Coasters</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="tablecloth" data-category="dining">
+                                        <img src="https://plus.unsplash.com/premium_photo-1670869816894-e020bc93b279?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Tablecloth">
+                                        <p>Tablecloth</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="napkin-holder" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1655153379110-c13ed8b19529?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Napkin Holder">
+                                        <p>Napkin Holder</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="fruit-bowl" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1567980145038-eca35242bb75?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Fruit Bowl">
+                                        <p>Fruit Bowl</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bread-basket" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1573095709988-1e208fc91c27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Bread Basket">
+                                        <p>Bread Basket</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="serving-tray" data-category="dining">
+                                        <img src="https://plus.unsplash.com/premium_photo-1682377521337-85a7daca5388?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Serving Tray">
+                                        <p>Serving Tray</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="cutlery-box" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1676976528790-968650f44264?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Cutlery Box">
+                                        <p>Cutlery Box</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="dinnerware-set" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1631636659215-a6266899be26?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Dinnerware Set">
+                                        <p>Dinnerware Set</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="glassware-set" data-category="dining">
+                                        <img src="https://images.unsplash.com/photo-1594650541713-58495800c908?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Glassware Set">
+                                        <p>Glassware Set</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                </div>
+
+                                <!-- Office Items -->
+                                <div class="furniture-items" id="office-items">
+                                    <div class="furniture-item" data-item="desk" data-category="office">
+                                        <span class="furniture-tag">Smart</span>
+                                        <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd"
+                                            alt="Desk">
+                                        <p>Smart Desk</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="office-chair" data-category="office">
+                                        <img src="https://plus.unsplash.com/premium_photo-1671656349007-0c41dab52c96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Office Chair">
+                                        <p>Ergonomic Chair</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="bookshelf-office" data-category="office">
+                                        <img src="https://media.istockphoto.com/id/1656546465/photo/library-in-the-living-room-with-pink-armchair-on-empty-dark-brown-color-wall.jpg?s=2048x2048&w=is&k=20&c=44NF9Z65qhjkAvpxOE9timOnwGiSRJPPbJHfDhpS-hk="
+                                            alt="Bookshelf">
+                                        <p>Office Bookshelf</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="filing-cabinet" data-category="office">
+                                        <img src="https://plus.unsplash.com/premium_photo-1720884611740-f5e807d7c77e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Filing Cabinet">
+                                        <p>Filing Cabinet</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="computer-table" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1699831112447-9c8c803f584b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Computer Table">
+                                        <p>Computer Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="office-chair" data-category="office">
+                                        <img src="https://plus.unsplash.com/premium_photo-1661962236606-b3bdd9457393?q=80&w=2113&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Office Chair">
+                                        <p>Office Chair</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="task-light" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1719150006658-753737b77211?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Task Light">
+                                        <p>Task Light</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="printer-table" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1657524433818-938be6f05fab?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Printer Table">
+                                        <p>Printer Table</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="whiteboard" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1692133230791-71d5a53f0f74?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Whiteboard">
+                                        <p>Whiteboard</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="laptop-stand" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1634768291716-4f1fa5cea55d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Laptop Stand">
+                                        <p>Laptop Stand</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="storage-shelves" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1721739224910-ddbfd10d3c48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Storage Shelves">
+                                        <p>Storage Shelves</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="file-organizer" data-category="office">
+                                        <img src="https://plus.unsplash.com/premium_photo-1720707755672-fa44f1711954?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="File Organizer">
+                                        <p>File Organizer</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="ergonomic-mat" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1623177579213-7efd042e73c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Ergonomic Mat">
+                                        <p>Ergonomic Mat</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                    <div class="furniture-item" data-item="office-decor" data-category="office">
+                                        <img src="https://images.unsplash.com/photo-1737233030536-247c1379d82c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Office Decor">
+                                        <p>Office Decor</p>
+                                        <button class="select-item-btn">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="generate-section">
+                            <button id="generateDesign" class="btn btn-primary" disabled>
+                                <i class="fas fa-magic"></i> Generate 3D Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-navigation">
+                <button class="btn btn-outline" id="prevStep" disabled>
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button class="btn btn-primary" id="nextStep">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About SmartFurnishing</h2>
+                    <p>Founded in 2024, SmartFurnishing combines cutting-edge technology with timeless furniture
+                        craftsmanship to revolutionize how people design their living spaces.</p>
+                    <p>Our team of designers, engineers, and AI specialists work together to create furniture that's not
+                        just beautiful, but intelligent and adaptable to modern lifestyles.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>5,000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>Design Partners</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>20+</h3>
+                            <p>Awards Won</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d" alt="Our Workshop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our design experts</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Shantilal Shah Engineering College,Bhavnagar</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>artisthuman2004@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 9574632570</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SMART<span>FURNISHING</span></h4>
+                    <p>Smart Furnishing solutions for modern living.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#design">Design Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for design tips and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartFurnishing. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/main.js" defer></script>
+    <script src="./static/design-tool.js" defer></script>
+</body>
+
+</html>

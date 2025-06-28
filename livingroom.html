@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFurnish | Design Details</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="smart.html" class="logo">SMART<span>FURNISHING</span></a>
+            <ul class="nav-links">
+                <li><a href="smart.html#home">Home</a></li>
+                <li><a href="smart.html#features">Features</a></li>
+                <li><a href="smart.html#services">Services</a></li>
+                <li><a href="smart.html#design">Design Tool</a></li>
+                <li><a href="smart.html#about">About</a></li>
+                <li><a href="smart.html#contact">Contact</a></li>
+                <li id="guestControls">
+                    <a href="#" class="btn btn-outline" data-auth="login">Login</a>
+                    <a href="#" class="btn btn-secondary" data-auth="signup">Sign Up</a>
+                </li>
+
+                <!-- Authenticated view: shows when logged in -->
+                <li id="authControls" style="display: none;">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <span class="user-name" id="userDisplay">User</span>
+                        <div class="user-dropdown">
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Design Details Section -->
+    <section class="design-details">
+        <div class="container">
+            <div class="design-header">
+                <h1>Modern Living Room Design</h1>
+                <div class="design-meta">
+                    <span class="design-style">Modern Style</span>
+                    <span class="design-room">Living Room</span>
+                </div>
+            </div>
+            
+            <div class="design-content">
+                <div class="design-gallery">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Modern Living Room">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Living Room View 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Living Room View 2">
+                        </div>
+                        <!-- <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1583845112209-5dc6a0d035d1" alt="Living Room View 3">
+                        </div> -->
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38" alt="Living Room View 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-info">
+                    <div class="design-description">
+                        <h2>About This Design</h2>
+                        <p>This modern living room combines clean lines with smart functionality. The minimalist approach creates a spacious feel while our integrated smart furniture provides hidden storage and technology solutions.</p>
+                        <p>The color palette of neutral tones with subtle wood accents creates a calming atmosphere, perfect for relaxation and entertainment.</p>
+                    </div>
+                    
+                    <div class="design-features">
+                        <h2>Key Features</h2>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Smart sofa with built-in USB charging</li>
+                            <li><i class="fas fa-check"></i> Modular coffee table with hidden storage</li>
+                            <li><i class="fas fa-check"></i> Space-saving wall-mounted TV unit</li>
+                            <li><i class="fas fa-check"></i> Adjustable LED lighting system</li>
+                            <li><i class="fas fa-check"></i> Sustainable materials with eco-friendly finishes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="design-specs">
+                        <h2>Specifications</h2>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <h3>Room Size</h3>
+                                <p>4.5m x 5.2m</p>
+                            </div>
+                            <div class="spec-item">
+                                <h3>Style</h3>
+                                <p>Modern</p>
+                            </div>
+                            <div class="spec-item">
+                                <h3>Color Palette</h3>
+                                <p>Neutral tones with wood accents</p>
+                            </div>
+                            <div class="spec-item">
+                                <h3>Furniture Pieces</h3>
+                                <p>7 main pieces</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="design-cta">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-magic"></i> Recreate This Design
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i> Save to Favorites
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="design-furniture">
+                <h2>Furniture Used in This Design</h2>
+                <div class="furniture-grid">
+                    <div class="furniture-item">
+                        <img src="https://plus.unsplash.com/premium_photo-1664301252346-90c498b35a59" alt="Modern Sofa">
+                        <h3>Modern Smart Sofa</h3>
+                        <p>$1,299.00</p>
+                        <button class="btn btn-outline">Add to Cart</button>
+                    </div>
+                    <div class="furniture-item">
+                        <img src="https://images.unsplash.com/photo-1594000311835-6d564e5a46b3" alt="Coffee Table">
+                        <h3>Modular Coffee Table</h3>
+                        <p>$499.00</p>
+                        <button class="btn btn-outline">Add to Cart</button>
+                    </div>
+                    <div class="furniture-item">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91" alt="TV Stand">
+                        <h3>Wall-Mounted TV Unit</h3>
+                        <p>$799.00</p>
+                        <button class="btn btn-outline">Add to Cart</button>
+                    </div>
+                    <div class="furniture-item">
+                        <img src="https://images.unsplash.com/photo-1675767528183-628d7e46ae59" alt="Floor Lamp">
+                        <h3>Adjustable Floor Lamp</h3>
+                        <p>$199.00</p>
+                        <button class="btn btn-outline">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="similar-designs">
+                <h2>Similar Designs You Might Like</h2>
+                <div class="similar-grid">
+                    <div class="similar-item">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Scandinavian Living">
+                        <h3>Scandinavian Living Room</h3>
+                        <a href="explore.html" class="btn btn-outline">View Design</a>
+                    </div>
+                    <div class="similar-item">
+                        <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd" alt="Modern Office">
+                        <h3>Modern Home Office</h3>
+                        <a href="explore.html" class="btn btn-outline">View Design</a>
+                    </div>
+                    <div class="similar-item">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="Industrial Dining">
+                        <h3>Industrial Dining Space</h3>
+                        <a href="explore.html" class="btn btn-outline">View Design</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SMART<span>FURNISHING</span></h4>
+                    <p>Smart Furnishing solutions for modern living.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="smart.html#home">Home</a></li>
+                        <li><a href="smart.html#features">Features</a></li>
+                        <li><a href="smart.html#services">Services</a></li>
+                        <li><a href="smart.html#design">Design Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="smart.html#about">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for design tips and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartFurnishing. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/main.js" defer></script>
+    <script src="./static/explore.js" defer></script>
+</body>
+</html>

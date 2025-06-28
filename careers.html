@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFurnish | Careers</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="smart.html" class="logo">SMART<span>FURNISHING</span></a>
+            <ul class="nav-links">
+                <li><a href="smart.html#home">Home</a></li>
+                <li><a href="smart.html#features">Features</a></li>
+                <li><a href="smart.html#services">Services</a></li>
+                <li><a href="smart.html#design">Design Tool</a></li>
+                <li><a href="smart.html#about">About</a></li>
+                <li><a href="smart.html#contact">Contact</a></li>
+                <!-- <li><a href="blog.html">Blog</a></li> -->
+                <!-- <li><a href="careers.html" class="active">Careers</a></li> -->
+                 <li id="guestControls">
+                    <a href="#" class="btn btn-outline" data-auth="login">Login</a>
+                    <a href="#" class="btn btn-secondary" data-auth="signup">Sign Up</a>
+                </li>
+
+                <!-- Authenticated view: shows when logged in -->
+                <li id="authControls" style="display: none;">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <span class="user-name" id="userDisplay">User</span>
+                        <div class="user-dropdown">
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Careers Hero Section -->
+    <section class="careers-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join Our Team</h1>
+                <p>Help us revolutionize the future of smart furniture and interior design</p>
+                <a href="#open-positions" class="btn btn-primary">View Open Positions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="why-work-with-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Work at SmartFurnishing?</h2>
+                <p>We're building the future of living spaces</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Work on cutting-edge smart furniture technology that's changing how people live.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>Join a diverse team of designers, engineers, and creatives who value teamwork.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Be part of our mission to create eco-friendly, sustainable furniture solutions.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Growth</h3>
+                    <p>Continuous learning opportunities and career development programs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wellbeing</h3>
+                    <p>Comprehensive health benefits and work-life balance initiatives.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Recognition</h3>
+                    <p>Your contributions will be valued and rewarded in our growing company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Culture -->
+    <section class="our-culture">
+        <div class="container">
+            <div class="culture-content">
+                <div class="culture-text">
+                    <h2>Our Culture</h2>
+                    <p>At SmartFurnishing, we believe that great products come from great teams. Our culture is built on creativity, collaboration, and a shared passion for transforming living spaces.</p>
+                    <p>We value diversity, encourage innovation, and support each team member's professional growth. Whether you're designing the next generation of smart furniture or helping customers create their dream spaces, your work will have a meaningful impact.</p>
+                    <div class="culture-stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Team Members</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Countries Represented</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>4.8/5</h3>
+                            <p>Employee Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="culture-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="open-positions" id="open-positions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Open Positions</h2>
+                <p>Join our growing team</p>
+            </div>
+            
+            <div class="position-filters">
+                <div class="filter-group">
+                    <label for="department">Department:</label>
+                    <select id="department">
+                        <option value="all">All Departments</option>
+                        <option value="design">Design</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="operations">Operations</option>
+                        <option value="customer-support">Customer Support</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Location:</label>
+                    <select id="location">
+                        <option value="all">All Locations</option>
+                        <option value="remote">Remote</option>
+                        <option value="new-york">New York</option>
+                        <option value="san-francisco">San Francisco</option>
+                        <option value="london">London</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="positions-list">
+                <!-- Position 1 -->
+                <div class="position-card" data-department="design" data-location="new-york">
+                    <div class="position-content">
+                        <h3>Senior Furniture Designer</h3>
+                        <div class="position-meta">
+                            <span class="department">Design</span>
+                            <span class="location">New York, NY</span>
+                            <span class="type">Full-time</span>
+                        </div>
+                        <p class="position-excerpt">Lead the design of innovative smart furniture collections that combine aesthetics with cutting-edge technology.</p>
+                    </div>
+                    <a href="position-details.html" class="btn btn-outline">View Details</a>
+                </div>
+                
+                <!-- Position 2 -->
+                <div class="position-card" data-department="engineering" data-location="remote">
+                    <div class="position-content">
+                        <h3>IoT Engineer</h3>
+                        <div class="position-meta">
+                            <span class="department">Engineering</span>
+                            <span class="location">Remote</span>
+                            <span class="type">Full-time</span>
+                        </div>
+                        <p class="position-excerpt">Develop the next generation of smart furniture with integrated IoT capabilities and home automation features.</p>
+                    </div>
+                    <a href="position-details.html" class="btn btn-outline">View Details</a>
+                </div>
+                
+                <!-- Position 3 -->
+                <div class="position-card" data-department="marketing" data-location="san-francisco">
+                    <div class="position-content">
+                        <h3>Digital Marketing Manager</h3>
+                        <div class="position-meta">
+                            <span class="department">Marketing</span>
+                            <span class="location">San Francisco, CA</span>
+                            <span class="type">Full-time</span>
+                        </div>
+                        <p class="position-excerpt">Lead our digital marketing efforts and develop campaigns that showcase our smart furniture solutions.</p>
+                    </div>
+                    <a href="position-details.html" class="btn btn-outline">View Details</a>
+                </div>
+                
+                <!-- Position 4 -->
+                <div class="position-card" data-department="customer-support" data-location="remote">
+                    <div class="position-content">
+                        <h3>Customer Experience Specialist</h3>
+                        <div class="position-meta">
+                            <span class="department">Customer Support</span>
+                            <span class="location">Remote</span>
+                            <span class="type">Full-time</span>
+                        </div>
+                        <p class="position-excerpt">Help customers design their perfect spaces and get the most from our smart furniture products.</p>
+                    </div>
+                    <a href="position-details.html" class="btn btn-outline">View Details</a>
+                </div>
+                
+                <!-- Position 5 -->
+                <div class="position-card" data-department="operations" data-location="london">
+                    <div class="position-content">
+                        <h3>Supply Chain Manager</h3>
+                        <div class="position-meta">
+                            <span class="department">Operations</span>
+                            <span class="location">London, UK</span>
+                            <span class="type">Full-time</span>
+                        </div>
+                        <p class="position-excerpt">Optimize our sustainable supply chain for smart furniture production and distribution across Europe.</p>
+                    </div>
+                    <a href="position-details.html" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+            
+            <div class="no-positions" style="display: none;">
+                <p>No positions match your current filters. Please try different criteria.</p>
+                <button class="btn btn-primary" id="reset-filters">Reset Filters</button>
+            </div>
+            
+            <div class="talent-network">
+                <h3>Don't see your perfect role?</h3>
+                <p>Join our talent network to be notified about future opportunities that match your skills and interests.</p>
+                <form class="talent-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <select>
+                        <option value="">Area of Interest</option>
+                        <option value="design">Design</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="operations">Operations</option>
+                        <option value="customer-support">Customer Support</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Join Talent Network</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee Testimonials -->
+    <section class="employee-testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hear From Our Team</h2>
+                <p>What it's really like to work at SmartFurnishing</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I love how my work designing smart furniture directly impacts how people live in their homes. The collaborative culture here brings out the best in everyone."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J.">
+                        <div class="author-info">
+                            <h4>Sarah J.</h4>
+                            <p>Senior Furniture Designer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The opportunity to work with cutting-edge IoT technology in the furniture space is incredibly exciting. Every day brings new challenges and learning opportunities."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="David L.">
+                        <div class="author-info">
+                            <h4>David L.</h4>
+                            <p>IoT Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"What stands out to me is the company's commitment to sustainability. We're not just making furniture - we're creating solutions for better living."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria K.">
+                        <div class="author-info">
+                            <h4>Maria K.</h4>
+                            <p>Supply Chain Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SMART<span>FURNISHING</span></h4>
+                    <p>Smart Furnishing solutions for modern living.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="smart.html#home">Home</a></li>
+                        <li><a href="smart.html#features">Features</a></li>
+                        <li><a href="smart.html#services">Services</a></li>
+                        <li><a href="smart.html#design">Design Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="smart.html#about">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartFurnishing. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/main.js" defer></script>
+    <script src="./static/careers.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFurnish | Design Gallery</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="smart.html" class="logo">SMART<span>FURNISHING</span></a>
+            <ul class="nav-links">
+                <li><a href="smart.html#home">Home</a></li>
+                <li><a href="smart.html#features">Features</a></li>
+                <li><a href="smart.html#services">Services</a></li>
+                <li><a href="smart.html#design">Design Tool</a></li>
+                <li><a href="smart.html#about">About</a></li>
+                <li><a href="smart.html#contact">Contact</a></li>
+                 <li id="guestControls">
+                    <a href="#" class="btn btn-outline" data-auth="login">Login</a>
+                    <a href="#" class="btn btn-secondary" data-auth="signup">Sign Up</a>
+                </li>
+
+                <!-- Authenticated view: shows when logged in -->
+                <li id="authControls" style="display: none;">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="userAvatar">U</div>
+                        <span class="user-name" id="userDisplay">User</span>
+                        <div class="user-dropdown">
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Design Inspiration Gallery</h1>
+                <p>Explore beautifully designed spaces with our smart furniture collections</p>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by style, room type, or furniture...">
+                    <button class="btn btn-primary" onclick="redirectToGoogle()">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Designs</button>
+                <button class="filter-tab" data-filter="living-room">Living Room</button>
+                <button class="filter-tab" data-filter="bedroom">Bedroom</button>
+                <button class="filter-tab" data-filter="dining">Dining</button>
+                <button class="filter-tab" data-filter="office">Office</button>
+                <button class="filter-tab" data-filter="rustic">Rustic</button>
+                <button class="filter-tab" data-filter="modern">Modern</button>
+                <button class="filter-tab" data-filter="industrial">Industrial</button>
+                <button class="filter-tab" data-filter="scandinavian">Scandinavian</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Design 1 -->
+                <div class="gallery-item" data-category="living-room modern">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Modern Living Room">
+                    <div class="gallery-overlay">
+                        <h3>Modern Living Room</h3>
+                        <p>Clean lines and minimalist design with smart furniture integration</p>
+                        <a href="explore.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 2 -->
+                <div class="gallery-item" data-category="bedroom rustic">
+                    <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86" alt="Rustic Bedroom">
+                    <div class="gallery-overlay">
+                        <h3>Rustic Bedroom</h3>
+                        <p>Cozy retreat with natural materials and warm tones</p>
+                        <a href="bedroom.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 3 -->
+                <div class="gallery-item" data-category="dining industrial">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="Industrial Dining">
+                    <div class="gallery-overlay">
+                        <h3>Industrial Dining</h3>
+                        <p>Urban loft style with exposed elements and metal accents</p>
+                        <a href="homeoffice.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 4 -->
+                <div class="gallery-item" data-category="office scandinavian">
+                    <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd" alt="Scandinavian Office">
+                    <div class="gallery-overlay">
+                        <h3>Scandinavian Office</h3>
+                        <p>Light, airy workspace with functional simplicity</p>
+                        <a href="livingroom.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 5 -->
+                <div class="gallery-item" data-category="living-room scandinavian">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Scandinavian Living">
+                    <div class="gallery-overlay">
+                        <h3>Scandinavian Living</h3>
+                        <p>Minimalist comfort with natural wood and neutral tones</p>
+                        <a href="homeoffice.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 6 -->
+                <div class="gallery-item" data-category="bedroom modern">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Modern Bedroom">
+                    <div class="gallery-overlay">
+                        <h3>Modern Bedroom</h3>
+                        <p>Sleek design with smart storage solutions</p>
+                        <a href="bedroom.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 7 -->
+                <div class="gallery-item" data-category="dining rustic">
+                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb" alt="Rustic Dining">
+                    <div class="gallery-overlay">
+                        <h3>Rustic Dining</h3>
+                        <p>Farmhouse charm with reclaimed wood table</p>
+                        <a href="explore.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Design 8 -->
+                <div class="gallery-item" data-category="office industrial">
+                    <img src="https://images.unsplash.com/photo-1623177579213-7efd042e73c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFkanVzdGFibGUlMjBkZXNrfGVufDB8fDB8fHww" alt="Industrial Office">
+                    <div class="gallery-overlay">
+                        <h3>Industrial Office</h3>
+                        <p>Edgy workspace with metal and wood combination</p>
+                        <a href="homeoffice.html" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="load-more">
+                <button class="btn btn-primary">Load More Designs</button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get Design Inspiration Directly to Your Inbox</h2>
+                <p>Subscribe to our newsletter for weekly design tips, exclusive offers, and new product launches.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SMART<span>FURNISHING</span></h4>
+                    <p>Smart Furnishing solutions for modern living.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="smart.html#home">Home</a></li>
+                        <li><a href="smart.html#features">Features</a></li>
+                        <li><a href="smart.html#services">Services</a></li>
+                        <li><a href="smart.html#design">Design Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="smart.html#about">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for design tips and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartFurnishing. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/main.js" defer></script>
+    <script src="./static/gallery.js" defer></script>
+</body>
+</html>
