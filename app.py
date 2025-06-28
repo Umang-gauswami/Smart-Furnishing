@@ -42,7 +42,7 @@ pipe = pipe.to("cpu")
 
 # Safe offload methods to reduce memory usage
 pipe.enable_attention_slicing()
-pipe.enable_model_cpu_offload()
+# pipe.enable_model_cpu_offload()
 
 # Disable safety checker
 pipe.safety_checker = lambda images, **kwargs: (images, [False] * len(images))
