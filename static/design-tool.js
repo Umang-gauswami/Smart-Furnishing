@@ -295,59 +295,61 @@ async function showResultModal(prompt) {
 
     document.body.appendChild(modal); // ⬅️ Append it before accessing child elements
 
+try {
+    const reader = new FileReader();
+    const imageData = await new Promise((resolve) => {
+        reader.onload = (e) => resolve(e.target.result);
+        reader.readAsDataURL(fileInput.files[0]);
+    });
+
+    const response = await fetch("/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            image: imageData,
+            prompt: prompt.trim()
+        })
+    });
+
+    let result = null;
     try {
-        const reader = new FileReader();
-        const imageData = await new Promise((resolve) => {
-            reader.onload = (e) => resolve(e.target.result);
-            reader.readAsDataURL(fileInput.files[0]);
-        });
-
-
-        const response = await fetch("/generate", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                image: imageData,
-                prompt: prompt.trim()
-            })
-        });
-
-        const result = await response.json();
-
-        if (!response.ok || !result.image) {
-            throw new Error(result.error || "No image returned");
-        }
-
-        // Set modal HTML now that we have the image
-        modal.innerHTML = `
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div class="result-title">
-                    <h3>Your Generated Design</h3>
-                </div>
-
-                <div class="result-image">
-                    <img src="${result.image}" alt="Generated Design" id="resultImage" class="result-image">
-                </div>
-
-                <div class="result-actions">
-                    <button class="btn btn-outline" id="saveDesign">
-                        <i class="fas fa-bookmark"></i> Download Design
-                    </button>
-                    <button class="btn btn-primary regenerate-btn" id="regenerateDesign">
-                        <i class="fas fa-sync-alt"></i> Regenerate
-                    </button>
-                    <button class="btn btn-primary" id="startOver">
-                        <i class="fas fa-redo"></i> Start Over
-                    </button>
-                </div>
-            </div>
-        `;
-
-    } catch (err) {
-        console.error("Error:", err);
-        modal.innerHTML = `<p style="color: red;">${err.message}</p>`;
+        result = await response.json();
+    } catch (jsonErr) {
+        throw new Error("Invalid or empty JSON response");
     }
+
+    if (!response.ok || !result.image) {
+        throw new Error(result.error || "No image returned");
+    }
+
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="result-title">
+                <h3>Your Generated Design</h3>
+            </div>
+
+            <div class="result-image">
+                <img src="${result.image}" alt="Generated Design" id="resultImage" class="result-image">
+            </div>
+
+            <div class="result-actions">
+                <button class="btn btn-outline" id="saveDesign">
+                    <i class="fas fa-bookmark"></i> Download Design
+                </button>
+                <button class="btn btn-primary regenerate-btn" id="regenerateDesign">
+                    <i class="fas fa-sync-alt"></i> Regenerate
+                </button>
+                <button class="btn btn-primary" id="startOver">
+                    <i class="fas fa-redo"></i> Start Over
+                </button>
+            </div>
+        </div>
+    `;
+} catch (err) {
+    console.error("Error:", err);
+    modal.innerHTML = `<p style="color: red;">${err.message}</p>`;
+}
 
     modal.style.display = 'flex';
 
@@ -386,40 +388,46 @@ async function showResultModal(prompt) {
         regenerateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Regenerating...';
         regenerateBtn.disabled = true;
 
-        try {
-            const reader = new FileReader();
-            const imageData = await new Promise((resolve) => {
-                reader.onload = (e) => resolve(e.target.result);
-                reader.readAsDataURL(fileInput.files[0]);
-            });
+try {
+    const reader = new FileReader();
+    const imageData = await new Promise((resolve) => {
+        reader.onload = (e) => resolve(e.target.result);
+        reader.readAsDataURL(fileInput.files[0]);
+    });
 
-            const response = await fetch("/generate", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    image: imageData,
-                    prompt: prompt.trim()
-                })
-            });
+    const response = await fetch("/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            image: imageData,
+            prompt: prompt.trim()
+        })
+    });
 
-            const result = await response.json();
+    let result = null;
+    try {
+        result = await response.json();
+    } catch (jsonErr) {
+        throw new Error("Invalid or empty JSON response");
+    }
 
-            if (!response.ok || !result.image) {
-                throw new Error(result.error || "No image returned");
-            }
+    if (!response.ok || !result.image) {
+        throw new Error(result.error || "No image returned");
+    }
 
-            // Replace the image
-            const resultImage = modal.querySelector('#resultImage');
-            resultImage.src = result.image;
-            resultImage.style.display = "block";
+    // Replace the image
+    const resultImage = modal.querySelector('#resultImage');
+    resultImage.src = result.image;
+    resultImage.style.display = "block";
 
-        } catch (err) {
-            console.error("Regenerate Error:", err);
-            alert("Failed to regenerate. Try again.");
-        } finally {
-            regenerateBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Regenerate';
-            regenerateBtn.disabled = false;
-        }
+} catch (err) {
+    console.error("Regenerate Error:", err);
+    alert("Failed to regenerate: " + err.message);
+} finally {
+    regenerateBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Regenerate';
+    regenerateBtn.disabled = false;
+}
+
     });
     // Start over
     modal.querySelector('#startOver').addEventListener('click', () => {
