@@ -5,9 +5,10 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from PIL import Image
 import torch
+from dotenv import load_dotenv
 from huggingface_hub import login
 from diffusers import StableDiffusionInstructPix2PixPipeline
-
+load_dotenv()
 # --------------------------
 # Environment Configuration
 # --------------------------
