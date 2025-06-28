@@ -8,41 +8,46 @@ import torch
 from dotenv import load_dotenv
 from huggingface_hub import login
 from diffusers import StableDiffusionInstructPix2PixPipeline
+
 load_dotenv()
+
 # --------------------------
 # Environment Configuration
 # --------------------------
-torch.cuda.empty_cache()
-torch.backends.cudnn.benchmark = True
 
-# Login to Hugging Face
-token = os.getenv("HUGGINGFACE_TOKEN")
-if not token:
-    raise RuntimeError("HUGGINGFACE_TOKEN environment variable not set.")
-login(token=token)
-
-device = "cuda" if torch.cuda.is_available() else "cpu"
-torch_dtype = torch.float32  # For GTX 1650 compatibility
+device = "cpu"  # Force CPU on Render
+torch_dtype = torch.float32  # Always use float32 on CPU
 
 print("[OK] Device:", device)
 print("[OK] Torch dtype:", torch_dtype)
 
 # --------------------------
-# Load the Model
+# Login to Hugging Face
 # --------------------------
+
+token = os.getenv("HUGGINGFACE_TOKEN")
+if not token:
+    raise RuntimeError("HUGGINGFACE_TOKEN environment variable not set.")
+login(token=token)
+
+# --------------------------
+# Load the Model (CPU only)
+# --------------------------
+
 pipe = StableDiffusionInstructPix2PixPipeline.from_pretrained(
     "timbrooks/instruct-pix2pix",
     torch_dtype=torch_dtype
 )
+pipe = pipe.to("cpu")
 
-# Safe offload methods to reduce GPU usage
+# Safe offload methods to reduce memory usage
 pipe.enable_attention_slicing()
 pipe.enable_model_cpu_offload()
 
 # Disable safety checker
 pipe.safety_checker = lambda images, **kwargs: (images, [False] * len(images))
 
-# Optional xFormers (skip if not available)
+# Try xformers (won’t work on Render, but safely ignored)
 try:
     pipe.enable_xformers_memory_efficient_attention()
 except Exception:
@@ -54,6 +59,7 @@ print(f"[INFO] Model running on: {pipe.device}")
 # --------------------------
 # Flask App Setup
 # --------------------------
+
 app = Flask(__name__)
 CORS(app)
 
@@ -79,10 +85,8 @@ def generate_image():
             image_data = image_data.split(",")[1]
         input_image = Image.open(io.BytesIO(base64.b64decode(image_data)))
         input_image = input_image.convert("RGB").resize((320, 320))
-        
-        # Save input for debugging
-        input_image.save("debug_input.png")
 
+        input_image.save("debug_input.png")
         print("[INFO] Input image size:", input_image.size)
         print("[INFO] Prompt:", prompt)
 
@@ -107,8 +111,6 @@ def generate_image():
             "status": "success"
         })
 
-    except torch.cuda.OutOfMemoryError:
-        return jsonify({"error": "CUDA out of memory"}), 500
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -117,7 +119,7 @@ def serve_smart():
     return send_from_directory(".", "smart.html")
 
 # --------------------------
-# Run App
+# Run App (Render-compatible)
 # --------------------------
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
